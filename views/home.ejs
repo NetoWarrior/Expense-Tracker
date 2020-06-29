@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+<div class="home_navbar">
+        <h1 > <i class="fas fa-wallet walletLogo"></i> <span class="topHeading">Expense Tracker</span> </h1>
+        <button class="loginButton" onclick="displayForm()">Login</button>
+        <div class="popupForm" id="popupForm">
+            <form action="/login" method="POST">
+                <input type="email"  name="username" placeholder="Username">
+                <input type="password"  name="password" placeholder="Password">
+                <button type="submit" >Submit</button>
+            </form>
+        </div>
+       
+        
+    </div>
+
+    
+    <div class="advertisement">
+            <h1 class="display-4"><span>He</span>llo, <span>G</span>uys!</h1>
+            <p class="lead">Reasons to Keep Track of Expenditures</p>
+            <hr class="my-6">
+                <ul>
+                    <li>
+                        <p>It Helps You Stick to Your Budget</p>
+                    </li>
+                    <li>
+                        <p>Tracking Your Expenses Can Reveal Spending Issues</p>
+                    </li>
+                    <li>
+                        <p>It Helps You Meet Your Financial Objectives</p>
+                    </li>
+                    <li>
+                        <p>Make It Easier With an App or Software</p>
+                        </li>
+                </ul>
+                    <a class="btn btn-outline-light btn-lg" href="/register" role="button">Create Account</a>
+    </div>
+    <div >
+        <img class="adImage" src="/statistics.png" alt="graph">
+    </div>
+        
+          
+    <script> 
+        
+        function displayForm(){
+
+             var form = document.getElementById("popupForm");
+             if(form.style.display === "block"){
+                 form.style.display = "none";
+             } else {
+                 form.style.display = "block";
+             }
+        }
+    </script>
+
+
+
+<%- include('partials/footer') %>

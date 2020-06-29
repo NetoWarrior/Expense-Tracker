@@ -1,0 +1,483 @@
+body{
+    background-color:black;
+    margin: 0;
+    padding: 0;
+    color:#fbf9fa;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.topHeading{
+    font-family: 'Lobster', cursive;
+    padding: 2px;
+    color: #f7f7ee;
+}
+
+.loginButton{
+    position: absolute;
+    right:7rem;
+    top:4px;
+    border: 0;
+    background : none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid white;
+    padding: 14px 40px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor: pointer;
+}
+.loginButton:hover{
+    background: white;
+    color:black;
+}
+.walletLogo{
+    font-size: 1.5rem;
+    padding-left:1rem;
+    color:#09fff3 ;
+}
+
+.home_navbar{
+    padding-top: 2rem ;
+    padding-left: 4rem;
+    padding-bottom: 7rem;
+    width :100%;
+    height: 5rem;
+    
+}
+
+.icon_size{
+    font-size: 1.5rem;
+    padding:1.5rem;
+}
+
+.icon_size:hover{
+    color:rgb(0, 255, 234);
+}
+
+footer{
+   z-index: -1;
+   text-align: right;
+   font-size: small;
+   position:absolute;
+   right:2rem;
+   bottom:0px;
+   width:25%;
+   padding-top: 1rem;
+   padding-right: 1rem;
+   color:#141313;
+   
+}
+
+footer a{
+    color:#141313;
+}
+.advertisement{
+    width: 35%;
+    height:20rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top:3rem;
+    left:6rem;
+    background: none;
+}
+
+.advertisement span{
+    color:rgb(100, 100, 100);
+}
+
+.adImage{
+    position: absolute;
+    top:15rem;
+    right: 15rem;
+    width:250px;
+    height:250px;
+}
+
+.popupForm{
+    background:none;
+    display:none;
+    position:absolute;
+    width:300px;
+    padding: 10px 40px;
+    right:2rem;
+    text-align: center;
+    box-shadow: 4px 4px rgba(10, 10, 10, 0.712);
+    border-radius: 18px;
+}
+
+.popupForm h2{
+    color:whitesmoke;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.popupForm input[type = "email"],.popupForm input[type = "password"]{
+    font-size: small;
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #fbf9fa;
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+}
+
+.popupForm input[type = "email"]:focus,.popupForm input[type = "password"]:focus{
+    width:200px;
+    border-color: rgb(100, 100, 100);
+}
+
+.popupForm button{
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor: pointer;
+}
+.popupForm button:hover{
+    background:  #2ecc71;
+}
+
+.wallet{
+    text-align: center;
+    color: white;
+    width: 18rem;
+    background-color: none;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 180, 24);
+    padding:10px;
+}
+
+.wallet h5,h6{
+    text-transform: uppercase;
+    
+}
+
+
+.addWalletButton{
+    color:white;
+    position: absolute;
+    top: 1rem;
+    left: 31rem;
+    padding: 15px 75px;
+    background: none;
+    border: 2px solid grey;
+    border-radius: 20px;
+    transition: 500ms;
+}
+
+.addWalletButton:hover{
+    background-color: grey;
+    color: black;
+}
+.addWallet{
+    
+    position: relative;
+    margin-top: 3.1rem;
+    margin-left: 30rem;
+    width: 24rem;
+    padding: 0 20px 20px 20px;
+    background:none;
+    display:none;
+    padding: 10px 40px;
+    right:2rem;
+    text-align: center;
+
+
+    border-radius: 18px;
+
+}
+.addWallet input[type = "text"],.addWallet input[type = "number"]{
+    font-size: small;
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #fbf9fa;
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+}
+
+.addWallet input[type = "text"]:focus,.addWallet input[type = "number"]:focus{
+    width:200px;
+    border-color: rgb(100, 100, 100);
+}
+
+.addWallet button{
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor: pointer;
+}
+.addWallet button:hover{
+    background:  #2ecc71;
+}
+
+.walletsPage{
+    position:absolute;
+    top:20rem;
+    left:10rem;
+    width: 75%;
+    height:200px;
+}
+.balance{
+    width: 3rem;
+    height: 3rem;
+    margin:0 8px;
+}
+
+.trash{
+    background: none;
+    color:rgb(49, 1, 1);
+    border:none;
+    font-size: 1.3rem;
+    padding-left: 5rem;
+    transition: 250ms;
+}
+
+.trash:hover{
+    font-size: 1.5rem;
+    color:rgb(204, 11, 11);
+}
+
+.walletHeader{
+    margin:1rem 1.5rem;
+    padding: 1rem 3rem;
+    font-family: 'Pacifico', cursive;
+}
+.walletHeader h1{
+    margin-left:-1rem;
+    font-size: 4rem;
+}
+
+.walletHeader h3{
+    font-size: 2rem;
+    top: -4rem;
+    margin-left: 40rem;
+    position: relative;
+}
+
+.transaction{
+    position:absolute;
+    width: 73%;
+    height: 85%;
+    margin:3rem 10rem;
+    border: none;
+    border-radius: 20px;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+    box-shadow: 0 4px 8px 0 rgba(251, 255, 0, 0.589), 0 6px 20px 0 rgba(251, 255, 0, 0.589);
+}
+
+.newTransaction{
+    position:relative;
+    width:16rem;
+    height: 20rem;
+    top:-2rem;
+    margin-left: 3rem;
+}
+.newTransaction h2{
+    text-align: center;
+    font-size: large;
+    
+}
+
+.newTransaction input[type = "text"],.newTransaction input[type = "number"]{
+    font-size: small;
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #fbf9fa;
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+}
+
+.newTransaction select{
+    font-size: small;
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #fbf9fa;
+    padding: 4px;
+    width: 135px;
+    outline:none;
+    color:gray;
+    border-radius: 24px;
+    transition:0.25s;
+}
+.newTransaction input[type = "text"]:focus,.newTransaction input[type = "number"]:focus{
+    width:200px;
+    border-color: rgb(100, 100, 100);
+}
+
+.newTransaction button{
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor: pointer;
+}
+.newTransaction button:hover{
+    background:  #2ecc71;
+}
+
+.spendinglist{
+    position: absolute;
+    width: 40rem;
+    height: 23rem;
+    top: 10rem;
+    margin-left: 20rem;
+    overflow: hidden;
+    overflow-y: inherit;
+}
+.spendingItem{
+    position: relative;
+    background-color:rgba(92, 92, 92, 0.377);
+    padding:5px;
+    width: 100%;
+    height: 80px;
+    border:0.5px solid rgba(255, 217, 0, 0.267);
+    font-family: 'Staatliches', cursive;
+    word-spacing: 0.75rem;
+  }
+  
+.spendingItem h2{
+   position:relative;
+   font-size: 1.8rem;
+   margin-left:5rem;
+  }
+
+  
+.spendingItem h3{
+    color:rgb(54, 168, 60);
+    position: relative;
+    font-size: 1.5rem;
+    margin-left: 33rem;
+    top:-1.5rem;
+  }
+.spendingItem p{
+   position:relative;
+   font-size: 0.9rem;
+   margin-top:-1.8rem;
+   margin-left:5rem;
+}
+
+.spendinglist button{
+    position: relative;
+    background: none;
+    color: rgb(49, 1, 1);
+    border: none;
+    margin-left: 1.8rem;
+    top: -4.2rem;
+    font-size: 1.3rem;
+    transition: 250ms;
+}
+
+.spendinglist button:hover{
+    font-size: 1.5rem;
+    color:rgb(204, 11, 11);
+}
+
+.registerForm{
+    position: absolute;
+    margin:3rem 16rem;
+    padding: 0 4rem;
+    width: 800px;
+    height: 500px;
+    text-align: center;
+}
+
+.registerForm h1{
+    font-size: 1.5rem;
+}
+.registerForm input[type = "text"],.registerForm input[type = "email"],.registerForm input[type = "number"],.registerForm input[type = "password"]{
+    font-size: small;
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #fbf9fa;
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+}
+
+.registerForm input[type = "text"]:focus,.registerForm input:focus[type = "email"],.registerForm input:focus[type = "number"],.registerForm input:focus[type = "password"]{
+    background-color: rgb(94, 94, 94);
+    border-color: gold;
+    color: white;
+}
+
+.registerForm button{
+    border: 0;
+    background: none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline:none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor: pointer;
+}
+.registerForm button:hover{
+    background:  #2ecc71;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: linear-gradient(tranparent,red);
+    border-radius: 6px;
+}

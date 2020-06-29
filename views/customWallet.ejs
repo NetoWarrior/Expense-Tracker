@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+   
+    
+    <div class="transaction">
+        <div class="walletHeader">
+            <h1> <%= wallet.name %> </h1>
+            
+            <h3> <img src="/money.png" class="balance" alt="money"> ₹ <%= wallet.balance %> </h3>
+        </div>
+        
+                <div class="newTransaction">
+                    <h2>Add  New Transaction</h2>
+                        <form action="/transaction" method="POST">
+                            <input type="text" name="itemDescription" placeholder="Description">
+                            <input type="number" name="itemAmount" placeholder="Amount">
+                                <select name="itemType">
+                                    <option value="" disabled selected>Select Type</option>
+                                    <option value="Food and grocery">Food and grocery</option>
+                                    <option value="Housing">Housing</option>
+                                    <option value="Clothing">Clothing</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Transportation">Transportation</option>
+                                    <option value="Misc">Misc</option>
+                                </select>
+                            
+                            <input type="hidden" value="<%=wallet._id%>" name="itemWalletId">
+                            <button type="submit">Add New Transaction</button>
+                        </form>
+                </div>
+            
+            
+            <div class="spendinglist">
+                <% if(wallet.spendinglist){ %>
+                    <% wallet.spendinglist.forEach(function (item) { %>
+                        <div class="spendingItem">
+                            <div class="row">
+                              <div>
+                                <form action="/deleteTransaction/<%=wallet._id%>" method="POST"> 
+                                    <h2><%= item.description %> </h2>
+                                    <h3>  ₹ <%= item.amount %></h3>
+                                    <p> <%= item.type %> ### <%= item.time %> </p>
+                                    <input type="hidden" value="<%= item._id %>" name="deleteItemId">
+                                    <button type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                <% }) %>
+            <% } %>       
+            </div>
+
+        
+
+    </div>
+
+    
+
+<%- include('partials/footer') %>

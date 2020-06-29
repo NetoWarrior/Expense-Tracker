@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+    <div>
+        <button class="addWalletButton" onclick="displayForm()">Add a new <i class="fas fa-wallet walletLogo"></i></button>
+            <div class="addWallet" id="addWallet">
+                <form action="\wallets" method="POST">
+                    <input type="text" placeholder="Wallet Title" name="name">
+                    <input type="number" placeholder="Balance" name="balance">
+                    <button type="submit" >Create Wallet</button>
+                </form>
+            </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="walletsPage">
+        <div class="row">
+            <% if(walletList !== null){ %>
+                <% walletList.forEach(function(wallet){ %>
+                    <div class="col col-4">
+                        <div class="wallet ">
+                            <form action="\deleteWallet" method="POST">
+                                <h5 ><%=wallet.name %></h5>
+                                <h6 > <img src="/money.png" class="balance" alt="money">₹ <%=wallet.balance%></h6>
+                        
+                                <a href="/wallets/<%=wallet._id%>" class="btn btn-outline-info">View Wallet</a>
+                                <input type="hidden" value="<%=wallet._id%>" name="walletId"></input>
+                                <button type="submit" class="trash"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    
+                <% }) %>
+            <% } %>
+        </div>
+        
+        
+    </div>
+
+
+
+    
+    <script> 
+        
+        function displayForm(){
+
+             var form = document.getElementById("addWallet");
+             if(form.style.display === "block"){
+                 form.style.display = "none";
+             } else {
+                 form.style.display = "block";
+             }
+        }
+    </script>
+
+
+<%- include('partials/footer') %>
